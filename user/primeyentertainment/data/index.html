@@ -33,7 +33,7 @@
         const sqlitey = 'MTNmczNSSmVlU3ZTS2JRclNaeEM1cFJWUU1SRXZKSDFxb0Z5VFptMzV6MUk=';
         sqly = atob(sqlitey)
 
-        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sqly}/values/Sheet1?key=${sqlx}`)
+        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sqly}/values/primeyentertainment?key=${sqlx}`)
             .then(response => response.json())
             .then(data => {
                 const tableBody = document.getElementById('data-table');
