@@ -1,0 +1,209 @@
+<!doctype html>
+<head>
+	<script>
+		const apiKey = 'AIzaSyCl1SKJlzGSHC2eG6qXUI9hjJagZ-eAVFU';
+		const spreadsheetId = '13fs3RJeeSvSKbQrSZxC5pRVQMREvJH1qoFyTZm35z1I';
+
+		// Function to fetch and process data
+		async function fetchData(url, callback) {
+			try {
+				const response = await fetch(url);
+				const data = await response.json();
+				callback(data);
+			} catch (error) {
+				console.error('Error fetching data:', error);
+			}
+		}
+
+		// Process gallery image data
+		fetchData(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/gallery?key=${apiKey}`, (data) => {
+			const glDiv = document.getElementById('gl');
+
+			data.values.forEach(row => {
+				const img_url = row[0];
+
+				// Create image element
+				const img = document.createElement('img');
+				img.className = 'img-fluid';
+				img.src = img_url;
+
+				// Create gallery image div
+				const galleryImage = document.createElement('div');
+				galleryImage.className = 'gallery-image hover-overlay';
+				galleryImage.appendChild(img);
+
+				// Create column div
+				const colDiv = document.createElement('div');
+				colDiv.className = 'col';
+				colDiv.appendChild(galleryImage);
+
+				glDiv.appendChild(colDiv);
+			});
+		});
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="Rizwan Shaikh">
+	<meta name="description" content="Beauty Salon | By Rizwan Shaikh">
+	<meta name="keywords"
+		content="DSAThemes, Beauty, Salon, Beauty Parlour, Health Care, Makeup, Nail Salon, Therapy, Treatment">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Beauty Salon | By Rizwan Shaikh</title>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../t/g.css" rel="stylesheet">
+</head>
+<body>
+	<div id="page" class="page">
+		<header id="header" class="tra-menu navbar-dark white-scroll">
+			<div class="header-wrapper">
+				<div class="wsmobileheader clearfix">
+					<span class="smllogo">
+						<a href="../" class="logo-black"><img src="../t/g/logo-black.png" alt="mobile-logo"></a>
+					</span>
+					<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+				</div>
+				<div class="wsmainfull menu clearfix">
+					<div class="wsmainwp clearfix">
+						<div class="desktoplogo">
+							<a href="../" class="logo-black"><img src="../t/g/logo-black.png" alt="logo"></a>
+						</div>
+						<div class="desktoplogo">
+							<a href="../" class="logo-white"><img src="../t/g/logo-white.png" alt="logo"></a>
+						</div>
+						<nav class="wsmenu clearfix">
+							<ul class="wsmenu-list">
+								<li class="nl-simple" aria-haspopup="true"><a href="../" class="h-link">Home</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="../gallery"
+										class="h-link">Gallery</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="../pricing"
+										class="h-link">Pricing</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="../contact"
+										class="h-link">Contact</a></li>
+								<li class="nl-simple" aria-haspopup="true">
+									<a href="https://www.fresha.com/a/la-reine-beauty-center-abu-dhabi-al-raha-beach-hotel-27a80wrp" target="_blank" class="btn btn--tra-black hover--black last-link">Book
+										Online</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section id="reviews-page" class="pb-6 inner-page-title division">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="page-title-txt">
+							<h2>It’s Time For a Change</h2>
+							<p>The perfect combination of beauty and relaxation</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="gallery-1" class="gallery-section division">
+			<div class="container">
+				<div id="gl" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3"></div>
+				<div class="row">
+					<div class="col">
+						<div class="more-btn">
+							<a href="" class="btn btn--tra-black hover--black">Visit Our Instagram</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="pt-8 banner-1 banner-section">
+			<div class="container">
+				<div class="banner-1-wrapper banner-1-hair bg--fixed">
+					<div class="row">
+						<div class="col">
+							<div class="banner-1-txt text-center color--white">
+								<span class="section-id">This Week Only</span>
+								<h2>Get 30% OFF</h2>
+								<a href="https://www.fresha.com/a/la-reine-beauty-center-abu-dhabi-al-raha-beach-hotel-27a80wrp" target="_blank" class="btn btn--tra-white hover--white">Book an Appointment</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer-3" class="pt-8 footer division">
+			<div class="container text-center" id="ftr-center">
+				<div id="ftr" class="row">
+					<div id="ftr-left" class="col-sm-6"></div>	
+					<div id="ftr-right" class="col-sm-6"></div>
+				</div>
+				<hr>
+				<div class="bottom-footer">
+					<div class="row">
+						<div class="col">
+							<div class="footer-copyright"><p>&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Reine. Designed by <a href="https://iamrizwan.netlify.app/">Rizwan Shaikh</a></p></div>
+						</div>
+					</div>
+				</div>
+			</div>										
+		</footer>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+	<script src="../t/g.js"></script>
+	<script>
+		const ftrUrl = atob(`aHR0cHM6Ly9zaGVldHMuZ29vZ2xlYXBpcy5jb20vdjQvc3ByZWFkc2hlZXRzLzEzZnMzUkplZVN2U0tiUXJTWnhDNXBSVlFNUkV2SkgxcW9GeVRabTM1ejFJL3ZhbHVlcy9mb290ZXIhQTE6QTM/a2V5PUFJemFTeUNsMVNLSmx6R1NIQzJlRzZxWFVJOWhqSmFnWi1lQVZGVQ==`);
+		fetch(ftrUrl)
+			.then(response => response.json())
+			.then(data => {
+				const divElements = document.querySelectorAll('#ftr > div');
+				for (let i = 0; i < divElements.length; i++) {
+					divElements[i].innerHTML = data.values[i][0];
+				}
+			})
+			.catch(error => {
+				console.error(error);
+			});
+	</script>
+	<script>
+		var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?58815';
+		var s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.async = true;
+		s.src = url;
+		var options = {
+		"enabled":true,
+		"chatButtonSetting":{
+			"backgroundColor":"#00e785",
+			"ctaText":"Chat with us",
+			"borderRadius":"25",
+			"marginLeft": "0",
+			"marginRight": "20",
+			"marginBottom": "20",
+			"ctaIconWATI":false,
+			"position":"right"
+		},
+		"brandSetting":{
+			"brandName":"Rizwan Shaikh",
+			"brandSubTitle":"undefined",
+			"brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+			"welcomeText":"Hi there!\nHow can I help you?",
+			"messageText":"Hello, %0A I want to book your service",
+			"backgroundColor":"#00e785",
+			"ctaText":"Chat with us",
+			"borderRadius":"25",
+			"autoShow":false,
+			"phoneNumber":"919354366898"
+		}
+		};
+		s.onload = function() {
+			CreateWhatsappChatWidget(options);
+		};
+		var x = document.getElementsByTagName('script')[0];
+		x.parentNode.insertBefore(s, x);
+	</script>
+	<style>
+		.wa-chat-box-poweredby {
+	  display: none !important;
+	}
+	</style>
+</body>
+</html>
