@@ -1,0 +1,214 @@
+<!doctype html>
+
+<head>
+	<script>const gt=atob("QUl6YVN5Q2wxU0tKbHpHU0hDMmVHNnFYVUk5aGpKYWdaLWVBVkZV"),tg=atob("MTNmczNSSmVlU3ZTS2JRclNaeEM1cFJWUU1SRXZKSDFxb0Z5VFptMzV6MUk=");async function fetchData(e,t){try{const a=await fetch(e);t(await a.json())}catch(e){console.error("Error fetching data:",e)}}fetchData(`https://sheets.googleapis.com/v4/spreadsheets/${tg}/values/pricing?key=${gt}`,(e=>{const t={small:"small",medium:"medium",large:"large"};e.values.forEach((e=>{const[a,c,n,s]=e,l=document.createElement("li");l.className="pricing-1-item";const o=document.createElement("div");o.className="detail-price";const d=document.createElement("div");d.className="price-name",d.innerHTML=`<p>${a}</p>`;const i=document.createElement("div");i.className="price-dots";const m=document.createElement("div");m.className="price-number",m.innerHTML=`<p>${c}</p>`,o.appendChild(d),o.appendChild(i),o.appendChild(m);const r=document.createElement("div");if(r.className="price-txt",r.innerHTML=`<p>(${n})</p>`,l.appendChild(o),l.appendChild(r),t[s]){document.querySelector(`#${t[s]}`).appendChild(l)}}))})),fetchData(`https://sheets.googleapis.com/v4/spreadsheets/${tg}/values/footer!A1:A3?key=${gt}`,(e=>{const t=document.querySelectorAll("#ftr > div");e.values.forEach(((e,a)=>{t[a].innerHTML=e[0]}))})),fetchData(`https://sheets.googleapis.com/v4/spreadsheets/${tg}/values/timetable!A:B?key=${gt}`,(e=>{const t=document.getElementById("timetable");e.values.forEach((e=>{const a=document.createElement("tr");e.forEach(((e,t)=>{const c=document.createElement("td");c.textContent=e,1===t&&c.classList.add("text-end"),a.appendChild(c)})),t.appendChild(a)}))}))</script>
+	<meta charset=utf-8>
+	<meta http-equiv=X-UA-Compatible content="IE=edge">
+	<meta name=viewport content="width=device-width,initial-scale=1">
+	<title>Beauty Salon | By Rizwan Shaikh</title>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel=stylesheet>
+	<link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css rel=stylesheet>
+	<link href=../t/g.css rel=stylesheet>
+	</head>
+<body>
+	<div id="page" class="page">
+		<header id="header" class="tra-menu navbar-dark white-scroll">
+			<div class="header-wrapper">
+				<div class="wsmobileheader clearfix">
+					<span class="smllogo">
+						<a href="../" class="logo-black"><img src="../t/g/logo-black.png" alt="mobile-logo"></a>
+						<a href="../" class="logo-white"><img src="../t/g/logo-white.png" alt="mobile-logo"></a>
+					</span>
+					<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+				</div>
+				<div class="wsmainfull menu clearfix">
+					<div class="wsmainwp clearfix">
+						<div class="desktoplogo">
+							<a href="../" class="logo-black"><img src="../t/g/logo-black.png" alt="logo"></a>
+						</div>
+						<div class="desktoplogo">
+							<a href="../" class="logo-white"><img src="../t/g/logo-white.png" alt="logo"></a>
+						</div>
+						<nav class="wsmenu clearfix">
+							<ul class="wsmenu-list">
+								<li class="nl-simple" aria-haspopup="true"><a href="../" class="h-link">Home</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="../gallery" class="h-link">Gallery</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="../pricing" class="h-link">Pricing</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="../contact" class="h-link">Contact</a></li>
+								<li class="nl-simple" aria-haspopup="true">
+									<a href="https://www.fresha.com/a/la-reine-beauty-center-abu-dhabi-al-raha-beach-hotel-27a80wrp" target="_blank" class="btn btn--tra-black hover--black last-link">Book Online</a>
+								</li> 
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+			<div class="pt-10 ct-11 content-section">
+				<div class="container"><div class="ct-11-wrapper bg--04 bg--fixed"></div></div>
+			</div>
+			<div class="pt-5 pricing-1 pricing-section division">
+				<div class="container">
+					<div class="row">	
+						<div class="col">
+							<div class="category-title mb-6 text-center">	
+								<h2 class="h2-title">Cutting & Styling</h2>	
+							</div>	
+						</div>
+					</div>
+					<div class="pricing-1-wrapper">
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<div class="pricing-1-table left-column wow fadeInUp">
+									<ul id="small" class="pricing-list"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pt-5 pricing-1 pricing-section division">
+				<div class="container">
+					<div class="row">	
+						<div class="col">
+							<div class="category-title mb-6 text-center">	
+								<h2 class="h2-title">Hair Coloring</h2>	
+							</div>	
+						</div>
+					</div>
+					<div class="pricing-1-wrapper">
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<div class="pricing-1-table left-column wow fadeInUp">
+									<ul id="medium" class="pricing-list"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pt-5 pricing-1 pricing-section division">
+				<div class="container">
+					<div class="row">	
+						<div class="col">
+							<div class="category-title mb-6 text-center">	
+								<h2 class="h2-title">Hair Extensions</h2>	
+							</div>	
+						</div>
+					</div>
+					<div class="pricing-1-wrapper">
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<div class="pricing-1-table left-column wow fadeInUp">
+									<ul id="large" class="pricing-list"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="pt-8 banner-1 banner-section">
+				<div class="container">
+					<div class="banner-1-wrapper bg--fixed">
+						<div class="row">
+							<div class="col">
+								<div class="banner-1-txt text-center color--white">
+						 			<span class="section-id">This Week Only</span>
+									<h2>Get <span>30% OFF</span></h2>
+									<h3>Manicure + Gel Polish</h3>
+									<a href="https://www.fresha.com/a/la-reine-beauty-center-abu-dhabi-al-raha-beach-hotel-27a80wrp" target="_blank" class="btn btn--tra-white hover--white">Book an Appointment</a>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>	
+			</section>
+			<section class="py-8 ct-table content-section division">
+				<div class="container">
+					<div class="row d-flex align-items-center">
+						<div class="col-lg-6 order-last order-lg-2">
+							<div class="txt-table left-column wow fadeInRight">
+								<table class="table">
+									<tbody id="timetable"></tbody>
+								</table>
+							</div>
+						</div>	
+						<div class="col-lg-6 order-first order-lg-2">
+							<div class="right-column wow fadeInLeft">
+						 		<span class="section-id">Time Schedule</span>
+								<h2 class="h2-md">Working Hours</h2>
+								<p class="mb-0">Nemo ipsam egestas volute turpis varius ipsum egestas purus diam ligula 
+									sapien ultrice sapien tempor aliquam tortor ipsum and augue turpis quaerat aliquet 
+									congue and molestie magna in congue undo aliquet congue ultrices quaerat
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer id="footer-3" class="pt-8 footer division">
+				<div class="container text-center" id="ftr-center">
+					<div id="ftr" class="row">
+						<div id="ftr-left" class="col-sm-6"></div>	
+						<div id="ftr-right" class="col-sm-6"></div>
+					</div>
+					<hr>
+					<div class="bottom-footer">
+						<div class="row">
+							<div class="col">
+								<div class="footer-copyright"><p>&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Reine. Designed by <a href="https://iamrizwan.netlify.app/">Rizwan Shaikh</a></p></div>
+							</div>
+						</div>
+					</div>
+				</div>										
+			</footer>
+		</div>	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.min.js"></script>
+	<script src="../t/g.js"></script>
+	<script>
+		var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?58815';
+		var s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.async = true;
+		s.src = url;
+		var options = {
+		"enabled":true,
+		"chatButtonSetting":{
+			"backgroundColor":"#00e785",
+			"ctaText":"Chat with us",
+			"borderRadius":"25",
+			"marginLeft": "0",
+			"marginRight": "20",
+			"marginBottom": "20",
+			"ctaIconWATI":false,
+			"position":"right"
+		},
+		"brandSetting":{
+			"brandName":"Rizwan Shaikh",
+			"brandSubTitle":"undefined",
+			"brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+			"welcomeText":"Hi there!\nHow can I help you?",
+			"messageText":"Hello, %0A I want to book your service",
+			"backgroundColor":"#00e785",
+			"ctaText":"Chat with us",
+			"borderRadius":"25",
+			"autoShow":false,
+			"phoneNumber":"919354366898"
+		}
+		};
+		s.onload = function() {
+			CreateWhatsappChatWidget(options);
+		};
+		var x = document.getElementsByTagName('script')[0];
+		x.parentNode.insertBefore(s, x);
+	</script>
+	<style>
+		.wa-chat-box-poweredby {
+	  display: none !important;
+	}
+	</style>
+</body>
+
+</html>
